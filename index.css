@@ -95,6 +95,18 @@ code, pre {
     font-weight: bold;
     unicode-bidi: isolate;
 }
+.self-into p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+    margin-top: 0;
+    margin-bottom: 2rem;
+    color: #666;
+
+}
 a.link-button {
     display: inline-block;
     transition: background .5s ease;
