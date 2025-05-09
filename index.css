@@ -1,17 +1,19 @@
 
-.header{
-    border-bottom: 1px solid rgb(239, 239, 239);
+.header {
+  border-bottom: 1px solid rgb(239, 239, 239);
+  padding: 0 20px; /* Add horizontal padding to allow shrinking */
 }
-.head{
-    display: flex;
-    flex-direction: row;
-    font-family: 'Nunito', sans-serif;
-    max-width: 1040px;
-    height: 80px;
-    margin: 0px auto;
-    justify-content: space-between;
-    align-items: center;
 
+.head {
+  display: flex;
+  flex-direction: row;
+  font-family: 'Nunito', sans-serif;
+  max-width: 1040px;
+  height: 80px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Allows wrapping if needed */
 }
 .left-side{
     flex:1;
@@ -123,4 +125,25 @@ a.link-button {
     font-weight: 700;
     box-shadow: 2px 3px 5px rgba(0, 0, 0, .05);
     cursor: pointer;
+}
+
+@media screen and (max-width: 426px) {
+  .main-content {
+    grid-template-columns: 1fr;
+  }
+
+  .head {
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .left-side p,
+  .right-side p {
+    font-size: 14px;
+    margin: 4px 8px;
+  }
+
+  .right-side {
+    gap: 10px;
+  }
 }
