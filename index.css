@@ -96,6 +96,9 @@ hr {
     .main{
         grid-template-columns: 1fr;
     }
+    .sidenav{
+        width: 100%;
+    }
     
 } 
     
