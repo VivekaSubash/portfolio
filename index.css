@@ -1,149 +1,101 @@
-
-.header {
-  border-bottom: 1px solid rgb(239, 239, 239);
-  padding: 0 20px; /* Add horizontal padding to allow shrinking */
-}
-
-.head {
-  display: flex;
-  flex-direction: row;
-  font-family: 'Nunito', sans-serif;
-  max-width: 1040px;
-  height: 80px;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap; /* Allows wrapping if needed */
-}
-.left-side{
-    flex:1;
-    font-size: 1.1rem;
-}
-.right-side{
-    
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    font-size: 1.1rem;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-.main-content{
+.main
+{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 50px;
-     font-size: 1.1rem;
 }
-
-.self-into{
-    justify-content: center;
-    align-items: center;
-    padding: 20px 30px 20px 40px;
-
-}
-pre {
-    background: #0d0d0d;
-    color: #d5d5d5;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    word-break: normal;
-    line-height: 1.6;
-    font-weight: 400;
-    -moz-tab-size: 2;
-    -o-tab-size: 2;
-    tab-size: 2;
-    border-radius: 0;
-    margin: 1.5rem auto;
-    padding: 2rem;
-    border-radius: 6px;
-    border-top: 20px solid #d0d0d0;
-    -webkit-font-smoothing: subpixel-antialiased;
-    box-shadow: 2px 3px 30px rgba(0, 0, 0, .15);
-    display: block;
-}
-.code {
-    margin: auto;
-}
-code, pre {
-    font-family: Menlo, Roboto Mono, Courier New, monospace;
-}
-.token-punctuation{
+.sidenav{
+    background-color: #17252a;
+    height: 100%;
+    width: 300px;
+    padding: 10px;
+    background-color: #17252a;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 1;
+    top: 0;
+    left: 0;
     color: white;
+    text-align: center;
+    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
 }
-.token-string{
-    color: #66f4ad;
+.sidebarimage{
+   display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 5px solid #2b7a78;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
 }
-.token-boolean{
-    color: rgb(51, 199, 239);
-}
-.self-into h1 {
-    margin-bottom: 1rem;
-    line-height: 1.2;
-    margin-top: 0;
-    margin-bottom: 1.5rem;
-    font-weight: 400;
-    letter-spacing: -.03rem;
-        font-size: 2.5rem;
-    font-family: Paytone One;
-        display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-    unicode-bidi: isolate;
-}
-.self-into p{
+p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     unicode-bidi: isolate;
-    margin-top: 0;
-    margin-bottom: 2rem;
-    color: #666;
-
 }
-a.link-button {
-    display: inline-block;
-    transition: background .5s ease;
-    background-image: linear-gradient(90deg, #33c7ef 0, #37f093 51%, #33c7ef);
-    background-size: 300% auto;
-    color: #fff;
+.sidebarname {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20pt;
+    margin-top: 15px;
+    margin-bottom: 0px;
+}
+.sidebarquotes {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 12pt;
+    margin: 0pt;
+}
+.sidebarauthor {
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 8pt;
+    text-align-last: right;
+    margin-top: 3pt;
+    margin-right: 10pt;
+    margin-left: 10pt;
+    margin-bottom: 0pt;
+}
+hr {
+    height: 1px;
+    background-color: white;
     border: none;
-    border-radius: 6px;
-    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.logo-buttons button {
+  
+}
+
+.mediaicon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+}
+.urls a{
     text-decoration: none;
-    vertical-align: middle;
-    padding: 1rem 1.75rem;
-    font-size: 1.1rem;
-    font-weight: 700;
-    box-shadow: 2px 3px 5px rgba(0, 0, 0, .05);
+    height: 35px;
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    color: #def2f1;
+    background-color: #17252a;
     cursor: pointer;
+    display: block;
+    vertical-align: middle;
+    font-family: "Kumbh Sans", sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: #17252a 0.25s ease;
+    padding-block: 1px;
+    padding-inline: 6px;
+
 }
-
-@media screen and (max-width: 426px) {
-  .main-content {
-    grid-template-columns: 1fr;
-  }
-
-  .head {
-    height: auto;
-    padding: 10px 0;
-  }
-
-  .left-side p,
-  .right-side p {
-    font-size: 14px;
-    margin: 4px 8px;
-  }
-
-  .right-side {
-    gap: 10px;
-  }
-}
+@media screen and(max-width:426px){
+    .main{
+        grid-template-columns: 1fr;
+    }
+    
+} 
+    
