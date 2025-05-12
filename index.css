@@ -92,13 +92,12 @@ hr {
     padding-inline: 6px;
 
 }
-@media screen and(max-width:426px){
-    .main{
+@media screen and (max-width: 426px) {
+    .main {
         grid-template-columns: 1fr;
     }
-    .sidenav{
+    .sidenav {
         width: 100%;
     }
-    
-} 
-    
+}
+ 
