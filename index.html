@@ -13,30 +13,44 @@
     <body>
         <div class="main">
         <nav class="sidenav">
-            <img src="pro.png" class="sidebarimage">
+            <div class="top-section">
             <p class="sidebarname">Viveka Pandiaraj</p>
             <hr>
             <p class="sidebarquotes">The only way to do great work is to love what you do.</p>
             <p class="sidebarauthor">Steve Jobs</p>
             <hr>
 
-           
             <div class="logo-buttons">
-                <button title="Linkdin" class="buttonclass"><img src="linkedin-logo-png-2048.png" alt="" class="mediaicon"></button>
-                <button title="GitHub" class="githubbuttonclass"><img src="github-icon-size_24.png" class="mediaicon"></button>
-                <button title="LeetCode" class="leetcodebuttonclass"><img src="LeetCode_logo_black.png" class="mediaicon"></button>
-                <button title="Download CV" class="buttonclass"><img src="download.png" class="mediaicon"></button>
+                <a href="https://www.linkedin.com/in/viveka-p-333932224/" target="_blank" title="LinkedIn">
+                <button class="buttonclass">
+                    <img src="linkedin-logo-png-2048.png" alt="LinkedIn" class="mediaicon">
+                </button>
+                </a>
+                <a href="https://github.com/VivekaSubash" target="_blank" title="GitHub">
+                <button class="githubbuttonclass">
+                    <img src="github-icon-size_24.png" alt="GitHub" class="mediaicon">
+                </button>
+                </a>
+                <a href="https://leetcode.com/u/vivekasubash/" target="_blank" title="LeetCode">
+                <button class="leetcodebuttonclass">
+                    <img src="LeetCode_logo_black.png" alt="LeetCode" class="mediaicon">
+                </button>
+                </a>
+                <a href="Viveka-Pandiaraj.pdf" target="_blank" title="Download CV">
+                <button class="buttonclass">
+                    <img src="download.png" alt="Download CV" class="mediaicon">
+                </button>
+                </a>
             </div>
-             
+            </div>
+
             <div class="urls">
-                <a href="#about">About Me</a>
-                <a href="#skills">My Skills</a>
-                <a href="#">Work Experience</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact Me</a>
+            <a href="#about">About Me</a>
+            <a href="#skills">My Skills</a>
+            <a href="#work_experience">Work Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact Me</a>
             </div>
-
-
         </nav>
         <div class="content">
             <section id="about" class="about">
@@ -151,6 +165,69 @@
 				</div>
 			</div>
 		</section>
+
+       <section id="projects" class="projects">
+        <h1 class="titlehead">Projects</h1>
+        <div class="carousel-container">
+            <div class="carousel">
+            <div class="project_card">
+                <h3 class="card_title">CookFun</h3>
+                <p class="card_desc">
+                Interactive cooking site with recipe categories and step‐by‐step guides.
+                </p>
+                <a href="https://vivekasubash.github.io/CookFun/" target="_blank"
+                class="btn-small">
+                Live Demo
+                </a>
+            </div>
+              <div class="project_card">
+                <h3 class="card_title">CookFun</h3>
+                <p class="card_desc">
+                Interactive cooking site with recipe categories and step‐by‐step guides.
+                </p>
+                <a href="https://vivekasubash.github.io/CookFun/" target="_blank"
+                class="btn-small">
+                Live Demo
+                </a>
+            </div>
+              <div class="project_card">
+                <h3 class="card_title">CookFun</h3>
+                <p class="card_desc">
+                Interactive cooking site with recipe categories and step‐by‐step guides.
+                </p>
+                <a href="https://vivekasubash.github.io/CookFun/" target="_blank"
+                class="btn-small">
+                Live Demo
+                </a>
+            </div>
+            <!-- copy/paste .project_card for more projects -->
+            </div>
+        </div>
+        </section>
+
+
+        <!-- ===== CONTACT ME ===== -->
+        <section id="contact" class="contact">
+        <h1 class="titlehead">Contact Me</h1>
+        <form id="contactForm" class="contact_form" novalidate>
+            <div class="form_group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form_group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form_group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+            <p id="formFeedback" class="form_feedback" aria-live="polite"></p>
+        </form>
+        </section>
+
+
         </div>
     </div>
     <script src="index.js"></script>

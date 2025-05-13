@@ -13,93 +13,107 @@ html, body {
 
 /* FIXED SIDEBAR */
 .sidenav {
-    width: 325px;
-    background-color: #17252a;
-    color: white;
-    text-align: center;
-    box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    padding-bottom: 40px;
+  width: 325px;
+  background-color: #17252a;
+  color: white;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 0;
+  box-shadow: 2px 0px 3px rgba(0, 0, 0, 0.25);
+  text-align: center;
 }
-
-.sidebarimage {
-    display: block;
-    margin: 20px auto;
-    border: 5px solid #2b7a78;
-    border-radius: 50%;
-    width: 100px;
-    height: 100px;
+.top-section {
+  flex-shrink: 0;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
-
 .sidebarname {
-    font-size: 20pt;
-    margin: 15px 0 0;
+  font-size: 20pt;
+  margin: 0;
 }
 
 .sidebarquotes {
-    font-size: 12pt;
-    margin: 0;
+  font-size: 12pt;
+  margin: 10px 20px 0;
 }
 
 .sidebarauthor {
-    font-size: 8pt;
-    text-align: right;
-    margin: 3pt 10pt 0;
+  font-size: 8pt;
+  text-align: right;
+  margin: 3pt 10pt 10px;
 }
 
 hr {
-    height: 1px;
-    background-color: white;
-    border: none;
-    margin: 15px 0;
+  height: 1px;
+  background-color: white;
+  border: none;
+  margin: 15px 0;
 }
 
 .logo-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin: 15px 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+  flex-wrap: wrap;
 }
 
-button {
-    border: none;
-    border-radius: 100%;
-    padding: 8px;
-    background-color: #2b7a78;
-    transition: background-color 0.3s ease;
-    cursor: pointer;
+.buttonclass,
+.githubbuttonclass,
+.leetcodebuttonclass {
+  border: none;
+  border-radius: 100%;
+  padding: 8px;
+  background-color: #2b7a78;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
-button:hover {
-    background-color: #0077b5;
+
+.buttonclass:hover {
+  background-color: #0077b5;
 }
-.githubbuttonclass:hover{
- background-color: black;
+
+.githubbuttonclass:hover {
+  background-color: black;
 }
+
 .leetcodebuttonclass:hover {
-    background-color: white;
+  background-color: white;
 }
+
 .leetcodebuttonclass:hover .mediaicon {
-    filter: none;
+  filter: none;
 }
+
 .mediaicon {
-    width: 24px;
-    height: 24px;
-    filter: brightness(0) invert(1);
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+.urls {
+  flex-shrink: 0;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0 10px 10px;
 }
 
 .urls a {
-    display: block;
-    padding: 10px;
-    margin: 0px 10px;
-    color: #def2f1;
-    text-decoration: none;
-    transition: background-color 0.25s;
+  padding: 10px;
+  margin: 2px 0;
+  color: #def2f1;
+  text-decoration: none;
+  transition: background-color 0.25s;
 }
+
 .urls a:hover {
-    background-color: #2b7a78;
+  background-color: #2b7a78;
 }
 
 /* CONTENT ADJUSTMENT */
@@ -228,6 +242,7 @@ button:hover {
 }
 .we_content{
     margin-top: -25px;
+     white-space: nowrap;
 }
 .work_experience .card_list li {
     position: relative;
@@ -252,12 +267,128 @@ button:hover {
     transform-origin: bottom left;
     transform: rotate(45deg);
 }
+/* === PROJECTS CAROUSEL === */
+/* === PROJECTS — SINGLE-CARD OVERLAY CAROUSEL === */
+/* container & sizing */
+.projects {
+   background-color: #3aafa9;
+    padding: 50px 40px;
+    margin: 0;
+}
+.carousel-container {
+  position: relative;
+  height: 360px;   /* adjust if your cards are taller */
+  overflow: hidden;
+}
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* base card styling */
+.project_card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  padding: 1rem;
+  background: #feffff;
+  border-radius: 5px;
+  box-shadow: 0 6px 3px rgba(0,0,0,0.15);
+  transform: translate(-50%, -50%) scale(0.8);
+  opacity: 0.4;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+}
+
+/* centered card */
+.project_card.center {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  z-index: 3;
+}
+
+/* previous card to the left */
+.project_card.left {
+  transform: translate(calc(-50% - 320px), -50%) scale(0.8);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* next card immediately to the right */
+.project_card.right {
+  transform: translate(calc(-50% + 320px), -50%) scale(0.8);
+  opacity: 0.6;
+  z-index: 2;
+}
+
+/* all further cards tuck off-screen right */
+.project_card.off-right {
+  transform: translate(calc(-50% + 640px), -50%) scale(0.6);
+  opacity: 0.3;
+  z-index: 1;
+}
+
+/* text & button tweaks */
+.card_title { margin-top: 0; }
+.card_desc {
+  font-size: 0.9rem;
+  margin: 0.5rem 0 1rem;
+}
+.btn-small {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+
+/* === CONTACT ME === */
+.contact {
+  background-color: #3aafa9;
+  padding: 50px 40px;
+}
+.contact_form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #feffff;
+  padding: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 6px 3px rgba(0,0,0,0.15);
+}
+.form_group {
+  margin-bottom: 1rem;
+}
+.form_group label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+  color: #17252a;
+}
+.form_group input,
+.form_group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #17252a;
+  border-radius: 4px;
+  font-family: inherit;
+}
+.btn{
+    padding: 10px 20px 10px 20px;
+    background-color:  #2b7a78;
+    border: none;
+}
+.form_feedback {
+  margin-top: 1rem;
+  color: #8c2e3e;
+}
+
+
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
     .sidenav {
         position: relative;
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     .main {
         flex-direction: column;
@@ -266,10 +397,13 @@ button:hover {
         margin-left: 0;
         width: 100%;
     }
-    .firstname, .lastname {
+    .firstname{
         font-size: 2em;
     }
     .typedtextclass {
         font-size: 1em;
     }
+    .container {
+    margin: 0px 30px;
+}
 }

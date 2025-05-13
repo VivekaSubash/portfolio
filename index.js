@@ -37,3 +37,70 @@ document.addEventListener("DOMContentLoaded", function() {
 
   typeLine(); // Start typing effect
 });
+
+// ===== PROJECTS — SINGLE-CARD OVERLAY CAROUSEL LOGIC =====
+// Updated Projects Carousel Logic
+const carousel = document.querySelector('.carousel');
+const cards = Array.from(carousel.children);
+let current = 0;
+
+function updateCarousel() {
+  cards.forEach((card, i) => {
+    card.classList.remove('left','center','right','off-right');
+    if (i < current - 1) {
+      card.classList.add('off-right');
+    } else if (i === current - 1) {
+      card.classList.add('left');
+    } else if (i === current) {
+      card.classList.add('center');
+    } else if (i === current + 1) {
+      card.classList.add('right');
+    } else {
+      card.classList.add('off-right');
+    }
+  });
+}
+
+carousel.addEventListener('click', e => {
+  const clicked = e.target.closest('.project_card');
+  if (!clicked) return;
+  const idx = cards.indexOf(clicked);
+  if (idx > current) {
+    current = idx;
+  } else if (idx < current) {
+    current = idx;
+  }
+  updateCarousel();
+});
+
+// Initial render
+updateCarousel();
+window.addEventListener('resize', updateCarousel);
+
+
+
+
+// ===== CONTACT FORM HANDLER =====
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const name    = this.name.value.trim();
+  const email   = this.email.value.trim();
+  const message = this.message.value.trim();
+  const feedbackEl = document.getElementById('formFeedback');
+
+  if (!name || !email || !message) {
+    feedbackEl.style.color = '#8c2e3e';
+    feedbackEl.textContent = 'Please fill out all fields.';
+    return;
+  }
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    feedbackEl.style.color = '#8c2e3e';
+    feedbackEl.textContent = 'Please enter a valid email.';
+    return;
+  }
+
+  feedbackEl.style.color = '#2c8c86';
+  feedbackEl.textContent = `Thanks, ${name}! Your message has been sent.`;
+  this.reset();
+});
