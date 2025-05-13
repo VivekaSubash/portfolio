@@ -3,6 +3,7 @@
     <head>
         <title>Viveka Pandiaraj</title>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="skills.css">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -21,15 +22,15 @@
 
            
             <div class="logo-buttons">
-                <button title="Linkdin"><img src="linkedin-logo-png-1841.png" class="mediaicon"></button>
-                <button title="GitHub"><img src="github-icon-size_24.png" class="mediaicon"></button>
-                <button title="LeetCode"><img src="pngaaa.com-6749427.png" class="mediaicon"></button>
-                <button title="Download CV"><img src="download.png" class="mediaicon"></button>
+                <button title="Linkdin" class="buttonclass"><img src="linkedin-logo-png-2048.png" alt="" class="mediaicon"></button>
+                <button title="GitHub" class="githubbuttonclass"><img src="github-icon-size_24.png" class="mediaicon"></button>
+                <button title="LeetCode" class="leetcodebuttonclass"><img src="LeetCode_logo_black.png" class="mediaicon"></button>
+                <button title="Download CV" class="buttonclass"><img src="download.png" class="mediaicon"></button>
             </div>
              
             <div class="urls">
-                <a href="#">About Me</a>
-                <a href="#">My Skills</a>
+                <a href="#about">About Me</a>
+                <a href="#skills">My Skills</a>
                 <a href="#">Work Experience</a>
                 <a href="#">Projects</a>
                 <a href="#">Contact Me</a>
@@ -37,25 +38,121 @@
 
 
         </nav>
-        <div class="about">
-            <div class="title">
-              <h1 class="firstname">Viveka</h1>
-              <h1 class="lastname">Pandiaraj</h1>
-            </div>
+        <div class="content">
+            <section id="about" class="about">
+                <div class="title">
+                <h1 class="titlehead">About</h1>
+                </div>
             
-            <div class="container">
-                <div id="typedtext" class="typedtextclass">
-                    &gt; Hello!<br>
-                    &gt; My name is Viveka Pandiaraj.<br>
-                    &gt; I am a Full Stack Developer based in Vancouver, BC.<br>
-                    &gt; I enjoy creating responsive and user-friendly web applications.<br>
-                    &gt; I’m passionate about both front-end design and back-end logic.<br>
-                    &gt; I love clean code, good UI, and learning new technologies.<br>
-                    &gt; If you're interested to know more about me, you're in the right place :)
+                <div class="container">
+                    <div id="typedtext" class="typedtextclass">
+                   <div class="typedtextclass" id="typing"></div>
                     </div>
 
-            </div>
+                </div>
+            </section>
+
+
+            <section id="skills" class="skills">
+                <h1 class="titlehead">My Skills</h1>
+                <!-- C# Developer -->
+                <div class="card">
+                    <h3 class="card_title">C# Developer</h3>
+                    <img src="c-logo-icon-28402.png" alt="C#" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Object-oriented design and development using C#</li>
+                        <li>Creating reusable components and clean architecture</li>
+                        <li>Exception handling and code optimization</li>
+                        <li>Experience with Visual Studio</li>
+                    </ul>
+                </div>
+
+                <!-- .NET Developer -->
+                <div class="card">
+                    <h3 class="card_title">.NET Developer</h3>
+                    <img src="dotnet.png" alt=".NET" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Developing RESTful APIs with ASP.NET Core web api</li>
+                        <li>Implementing dependency injection and middleware</li>
+                        <li>Unit testing and debugging</li>
+                        <li>Project and solution management in .NET</li>
+                    </ul>
+                </div>
+
+                <!-- Database -->
+                <div class="card">
+                    <h3 class="card_title">Database Skills</h3>
+                    <img src="monogoDB.png" alt="Database" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Writing optimized SQL queries and joins</li>
+                        <li>Experience with MySQL and SQL Server</li>
+                        <li>Stored procedures and database triggers</li>
+                        <li>Working with NoSQL (MongoDB)</li>
+                    </ul>
+                </div>
+
+                <!-- HTML -->
+                <div class="card">
+                    <h3 class="card_title">HTML Skills</h3>
+                    <img src="html.png" alt="HTML" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Semantic HTML for accessibility</li>
+                        <li>Creating responsive layouts</li>
+                        <li>Form handling and validation</li>
+                        <li>Embedding multimedia and external resources</li>
+                    </ul>
+                </div>
+
+                <!-- CSS -->
+                <div class="card">
+                    <h3 class="card_title">CSS Skills</h3>
+                    <img src="css.png" alt="CSS" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>Responsive design using Flexbox and Grid</li>
+                        <li>Custom animations and transitions</li>
+                        <li>Using Sass/SCSS for modular styling</li>
+                        <li>Media queries and cross-browser design</li>
+                    </ul>
+                </div>
+
+                <!-- JavaScript -->
+                <div class="card">
+                    <h3 class="card_title">JavaScript Developer</h3>
+                    <img src="Javascript Logo (JS _ 01) - PNG Logo Vector Brand Downloads (SVG, EPS).jpg" alt="JavaScript" class="card_logo" loading="lazy">
+                    <ul class="card_list">
+                        <li>DOM manipulation and event handling</li>
+                        <li>Asynchronous programming with async/await</li>
+                        <li>JSON handling and API interaction</li>
+                        <li>Creating dynamic UI experiences</li>
+                    </ul>
+                </div>
+
+               
+            </section>
+
+            <section id="work_experience" class="work_experience">
+
+			<h1 class="titlehead">
+				WORK EXPERIENCE
+			</h1>
+			<div class="we_timeline">
+				<div class="we_container-left">
+					<div class="we_date">Mar 2022 - Mar 2024</div>
+					<div class="we_content">
+						<h2>Software Engineer</h2>
+                        <h3>Awarious Technology solutions</h3>
+                        <ul class="card_list">
+                        <li>Designed and implemented RESTful APIs for payroll, leave management, timesheet tracking &amp; geotracking</li>
+                        <li>Optimized application performance and stability through debugging, profiling &amp; code refactoring</li>
+                        <li>Handled JSON-based data exchanges and integrated third-party APIs for dynamic reporting dashboards</li>
+                        <li>Collaborated with cross-functional teams using asynchronous patterns (async/await) and Git workflows</li>
+                        </ul>
+					</div>
+				</div>
+			</div>
+		</section>
         </div>
     </div>
+    <script src="index.js"></script>
     </body>
 </html>
