@@ -389,9 +389,12 @@ hr {
         flex-direction: column;
     }
   .sidenav {
-     width: 100%;
-    position: relative;   /* No overlap */
-    margin-bottom: 0;
+     position:relative;          /* ← no more overlap      */
+    width:100%;
+    min-height:100svh;          
+                                /* (use 100dvh or 100vh   */
+                                /* if svh not supported)  */
+    overflow:visible;   
   }
    
     .content {
