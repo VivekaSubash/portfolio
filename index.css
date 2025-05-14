@@ -395,6 +395,7 @@ hr {
                                 /* (use 100dvh or 100vh   */
                                 /* if svh not supported)  */
     overflow:visible;   
+    padding-top: 60px;
   }
    
     .content {
