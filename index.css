@@ -242,7 +242,6 @@ hr {
 }
 .we_content{
     margin-top: -25px;
-     white-space: nowrap;
 }
 .work_experience .card_list li {
     position: relative;
@@ -385,23 +384,11 @@ hr {
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-   .sidenav {
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-    padding: 20px 10px;
-  }
-  .logo-buttons {
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  .sidebarname { font-size: 18pt; }
-  .sidebarquotes { font-size: 10pt; }
-  .sidebarauthor { font-size: 7pt; }
-  .urls a {
-    font-size: 14pt;
-    padding: 12px;
+  .sidenav {
+    width: 100%;
+    height: auto;
+    position: relative; 
+    margin-bottom: 0%;
   }
     .main {
         flex-direction: column;
