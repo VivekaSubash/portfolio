@@ -384,15 +384,16 @@ hr {
 
 /* RESPONSIVE */
 @media screen and (max-width: 768px) {
-  .sidenav {
-    width: 100%;
-    height: auto;
-    position: relative; 
-    margin-bottom: 0%;
-  }
-    .main {
+     .main {
+        display: flex;
         flex-direction: column;
     }
+  .sidenav {
+     width: 100%;
+    position: relative;   /* No overlap */
+    margin-bottom: 0;
+  }
+   
     .content {
         margin-left: 0;
         width: 100%;
