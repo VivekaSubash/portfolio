@@ -401,13 +401,19 @@ hr {
         margin-left: 0;
         width: 100%;
     }
-    .firstname{
-        font-size: 2em;
-    }
-    .typedtextclass {
-        font-size: 1em;
-    }
+     .logo-buttons {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .sidebarname { font-size: 18pt; }
+  .sidebarquotes { font-size: 10pt; }
+  .sidebarauthor { font-size: 7pt; }
+  .urls a {
+    font-size: 14pt;
+    padding: 12px;
+  }
     .container {
-    margin: 0px 30px;
+    margin: 0px 20px;
 }
 }
