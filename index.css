@@ -395,25 +395,13 @@ hr {
                                 /* (use 100dvh or 100vh   */
                                 /* if svh not supported)  */
     overflow:visible;   
-    padding-top: 60px;
+    padding-top: 100px;
   }
    
     .content {
         margin-left: 0;
         width: 100%;
     }
-     .logo-buttons {
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  .sidebarname { font-size: 18pt; }
-  .sidebarquotes { font-size: 10pt; }
-  .sidebarauthor { font-size: 7pt; }
-  .urls a {
-    font-size: 14pt;
-    padding: 12px;
-  }
     .container {
     margin: 0px 20px;
 }
