@@ -14,8 +14,8 @@ html, body {
 /* FIXED SIDEBAR */
 .sidenav {
   width: 325px;
-  background-color: #17252a;
-  color: white;
+  background-color:#F0F2F5;
+  color: #333333;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -49,7 +49,7 @@ html, body {
 
 hr {
   height: 1px;
-  background-color: white;
+  background-color: #333333;
   border: none;
   margin: 15px 0;
 }
@@ -58,7 +58,6 @@ hr {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin: 15px 0;
   flex-wrap: wrap;
 }
 
@@ -68,7 +67,7 @@ hr {
   border: none;
   border-radius: 100%;
   padding: 8px;
-  background-color: #2b7a78;
+  background-color:#555555;
   transition: background-color 0.3s ease;
   cursor: pointer;
 }
@@ -107,13 +106,13 @@ hr {
 .urls a {
   padding: 10px;
   margin: 2px 0;
-  color: #def2f1;
+  color: #333333;
   text-decoration: none;
   transition: background-color 0.25s;
 }
 
 .urls a:hover {
-  background-color: #2b7a78;
+  background-color: white;
 }
 
 /* CONTENT ADJUSTMENT */
@@ -123,7 +122,7 @@ hr {
 }
 
 .about {
-    background-color: #3aafa9;
+    background-color:#FFFFFF ;
     min-height: 100vh;
     padding: 50px 40px;
     margin: 0;
@@ -133,7 +132,7 @@ hr {
 }
 .titlehead {
     font-family: "Kumbh Sans", sans-serif;
-    color: #feffff;
+    color: #333333;
     text-shadow: 4px 4px 2px #17252a80;
     font-size: 300%;
     margin: 30;
@@ -141,7 +140,7 @@ hr {
     vertical-align: middle;
 }
 .firstname {
-    color: white;
+    color: #333333;
 }
 .lastname {
     color: var(--color1, white);
@@ -165,13 +164,13 @@ hr {
 
 /* REMOVE EXTRA SPACE BETWEEN SECTIONS */
 .skills {
-    background-color: #3aafa9;
+    background-color:#FFFFFF ;
     padding: 50px 40px;
     margin: 0;
 }
 .skills .card {
-    border: 2px solid #def2f1;
-    background-color: #def2f1;
+    border: 2px solid #F0F2F5;
+    background-color: #F0F2F5;
     border-radius: 5px;
     box-shadow: 0 8px 3px rgba(0, 0, 0, 0.25);
     padding: 1rem;
@@ -181,7 +180,7 @@ hr {
     display: inline;
     font-family: "Kumbh Sans", sans-serif;
     font-weight: bold;
-    color: black;
+    color: #333333;
     font-size: 100%;
     width: auto;
     vertical-align: middle;
@@ -203,7 +202,7 @@ hr {
     padding-left: 2rem;
     margin-bottom: 0.3rem;
     font-family: "Kumbh Sans", sans-serif;
-    color: #17252a;
+    color: #333333;
     font-size: 100%;
 }
 .skills .card_list li:before {
@@ -221,13 +220,13 @@ hr {
     transform: rotate(45deg);
 }
 .work_experience{
-     background-color: #3aafa9;
+     background-color: #FFFFFF ;
     padding: 50px 40px;
     margin: 0;
 }
 .we_container-left{
-      border: 2px solid #def2f1;
-    background-color: #def2f1;
+      border: 2px solid#F0F2F5;
+    background-color: #F0F2F5;
     border-radius: 5px;
     box-shadow: 0 8px 3px rgba(0, 0, 0, 0.25);
     padding: 1rem;
@@ -249,7 +248,7 @@ hr {
     padding-left: 1rem;
     margin-bottom: 0.3rem;
     font-family: "Kumbh Sans", sans-serif;
-    color: #17252a;
+    color: #333333;
     font-size: 100%;
 }
 .work_experience .card_list li:before {
@@ -270,7 +269,7 @@ hr {
 /* === PROJECTS — SINGLE-CARD OVERLAY CAROUSEL === */
 /* container & sizing */
 .projects {
-   background-color: #3aafa9;
+   background-color: #FFFFFF ;
     padding: 50px 40px;
     margin: 0;
 }
@@ -343,7 +342,7 @@ hr {
 
 /* === CONTACT ME === */
 .contact {
-  background-color: #3aafa9;
+  background-color: #FFFFFF ;
   padding: 50px 40px;
 }
 .contact_form {
@@ -373,7 +372,8 @@ hr {
 }
 .btn{
     padding: 10px 20px 10px 20px;
-    background-color:  #2b7a78;
+    background-color:  #555555;
+    color: white;
     border: none;
 }
 .form_feedback {
