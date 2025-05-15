@@ -133,7 +133,6 @@ hr {
 .titlehead {
     font-family: "Kumbh Sans", sans-serif;
     color: #333333;
-    text-shadow: 4px 4px 2px #17252a80;
     font-size: 300%;
     margin: 30;
     width: auto;
@@ -397,7 +396,11 @@ hr {
     overflow:visible;   
     padding-top: 100px;
   }
-   
+  
+   .logo-buttons{
+    margin-top: 20px;
+    margin-bottom: 40px;
+   }
     .content {
         margin-left: 0;
         width: 100%;

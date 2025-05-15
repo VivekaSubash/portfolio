@@ -83,16 +83,20 @@ window.addEventListener('resize', updateCarousel);
 // ===== CONTACT FORM HANDLER =====
 document.getElementById('contactForm').addEventListener('submit', function(e) {
   e.preventDefault();
+
   const name    = this.name.value.trim();
   const email   = this.email.value.trim();
   const message = this.message.value.trim();
   const feedbackEl = document.getElementById('formFeedback');
 
+  // Validation: Empty fields
   if (!name || !email || !message) {
     feedbackEl.style.color = '#8c2e3e';
     feedbackEl.textContent = 'Please fill out all fields.';
     return;
   }
+
+  // Validation: Email format
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   if (!emailPattern.test(email)) {
     feedbackEl.style.color = '#8c2e3e';
@@ -100,7 +104,15 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
     return;
   }
 
-  feedbackEl.style.color = '#2c8c86';
-  feedbackEl.textContent = `Thanks, ${name}! Your message has been sent.`;
-  this.reset();
+  // Send Email using EmailJS
+  emailjs.sendForm('service_j3s6vj5', 'template_zv8a9ad', this)
+    .then(function(response) {
+      feedbackEl.style.color = '#2c8c86';
+      feedbackEl.textContent = `Thanks, ${name}! Your message has been sent.`;
+      document.getElementById('contactForm').reset();
+    }, function(error) {
+      feedbackEl.style.color = '#8c2e3e';
+      feedbackEl.textContent = 'Oops! Something went wrong. Please try again later.';
+      console.error('EmailJS Error:', error);
+    });
 });
